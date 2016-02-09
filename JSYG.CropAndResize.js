@@ -142,6 +142,10 @@
             g,rect,selection;
 													
             if (!color || color == 'transparent' || color == 'none') color = 'white';
+            
+            if (dim.width < this.boxInit.width) this.boxInit.width = dim.width;
+            if (dim.height < this.boxInit.height) this.boxInit.height= dim.height;
+
 			
             rect = new JSYG('<rect>').fill(color);
             g = new JSYG('<g>').append(rect).append(jNode.clone());
