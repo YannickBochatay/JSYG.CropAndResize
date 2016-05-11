@@ -1,0 +1,37 @@
+{
+  "name": "jsyg-cropandresize",
+  "version": "0.0.3",
+  "description": "Crop and resize images with JSYG framework",
+  "main": "JSYG.CropAndResize.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/YannickBochatay/JSYG.CropAndResize.git"
+  },
+  "keywords": [
+    "svg",
+    "jquery",
+    "javascript",
+    "library"
+  ],
+  "author": "Yannick Bochatay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YannickBochatay/JSYG.CropAndResize/issues"
+  },
+  "homepage": "https://github.com/YannickBochatay/JSYG.CropAndResize#readme",
+  "dependencies": {
+    "jsyg":"",
+    "jsyg-editor":"",
+    "jsyg-canvas":""
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1"
+  }
+}

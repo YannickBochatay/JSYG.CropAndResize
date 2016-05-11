@@ -3,8 +3,20 @@
 
 (function(factory) {
     
-    if (typeof define != "undefined" && define.amd) define("jsyg-cropandresize",["jsyg","jsyg-editor","jsyg-canvas"],factory);
+    if (typeof module == "object" && typeof module.exports == "object") {
+      
+      module.exports = factory(
+        require("jsyg"),
+        require("jsyg-editor"),
+        require("jsyg-canvas")
+      );
+    }
+    else if (typeof define != "undefined" && define.amd) {
+      
+      define("jsyg-cropandresize",["jsyg","jsyg-editor","jsyg-canvas"],factory);
+    }
     else if (typeof JSYG != "undefined") {
+      
         if (JSYG.Editor && JSYG.Canvas) factory(JSYG,JSYG.Editor,JSYG.Canvas);
         else throw new Error("Dependency is missing");
     }

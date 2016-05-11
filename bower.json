@@ -4,6 +4,7 @@
     "description" : "Crop and resize images with JSYG framework",
     "main": "JSYG.CropAndResize.js",
     "moduleType": [
+        "node",
         "amd",
         "globals"
     ],
