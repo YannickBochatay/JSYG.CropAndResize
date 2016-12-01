@@ -34,7 +34,7 @@
     };
 	
     /**
-     * Recadrage et redimensionnement d'une image (en SVG et canvas) ou d'un noeud SVG (expérimental et incomplet)
+     * Recadrage et redimensionnement d'une image (en SVG et canvas)
      * @param arg argument JSYG faisant référence à l'élément à recadrer
      * @param opt optionnel, objet définissant les options. Si défini, le recadrage sera implicitement activé.
      * @returns {CropAndResize}
@@ -123,11 +123,17 @@
             svg = jNode.offsetParent(),
             dim = jNode.getDim(svg),
             mtx = jNode.getMtx(svg),
-            pattern = new JSYG(this.pattern);
+            pattern = new JSYG(this.pattern),
+            g = pattern.find("g"),
+            image = pattern.find("image"),
+            clone = jNode.clone();
 			
-            pattern.find('g').setMtx(mtx);
+            g.setMtx(mtx);
             pattern.find('rect').setDim(dim);
             pattern.setDim(dim);
+            
+            if (image.length) image.replaceWith(clone);
+            else g.append(clone);
 					
             new JSYG(this.mask).setDim(dim);
 							
@@ -160,7 +166,7 @@
 
 			
             rect = new JSYG('<rect>').fill(color);
-            g = new JSYG('<g>').append(rect).append(jNode.clone());
+            g = new JSYG('<g>').append(rect);
 			
             new JSYG(this.pattern)
                 .attr({id:id,patternUnits:'userSpaceOnUse'})
