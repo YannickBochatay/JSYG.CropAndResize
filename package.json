@@ -1,6 +1,6 @@
 {
   "name": "jsyg-cropandresize",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Crop and resize images with JSYG framework",
   "main": "JSYG.CropAndResize.js",
   "directories": {
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/YannickBochatay/JSYG.CropAndResize#readme",
   "dependencies": {
-    "jsyg":"",
-    "jsyg-editor":"",
-    "jsyg-canvas":""
+    "jsyg": "^1.0.2",
+    "jsyg-canvas": "^1.0.0",
+    "jsyg-editor": "^1.0.0"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6",

@@ -8,9 +8,8 @@ Crop and resize image with [JSYG framework](https://github.com/YannickBochatay/J
 ```shell
 npm install jsyg-cropandresize
 ```
-You can also install it with bower
 
-### Example with webpack/babel
+### Example with module bundler
 
 ```html
 <link rel="stylesheet" href="node_modules/jsyg-editor/JSYG.Editor.css"/>
